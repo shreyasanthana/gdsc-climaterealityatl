@@ -1,13 +1,12 @@
-import React from 'react'
-import MiniCalendar from "./components/MiniCalendar"
+import React from "react";
+import { Text } from "@chakra-ui/react";
+import MiniCalendar from "../components/MiniCalendar";
 
 
 const TestMiniCalendar = () => {
   return (
     <div>
-      <h1>
-        TestMiniCalendar
-      </h1>
+      <Text fontSize="2xl" mb={5}>TestMiniCalendar</Text>
       < MiniCalendar />
     </div>
   )
