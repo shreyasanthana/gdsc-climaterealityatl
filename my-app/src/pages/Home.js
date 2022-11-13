@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
+import Hero from "../components/Hero";
 
 
 const Home = () => {

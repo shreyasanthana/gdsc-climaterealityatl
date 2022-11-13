@@ -9,6 +9,9 @@ const Navbar = () => {
         <Link href="/">
           <Text as="u" color="blue">Home</Text>
         </Link>
+        <Link href="/testhero">
+          <Text as="u" color="blue">Hero Test Page</Text>
+        </Link>
         <Link href="/testminicalendar">
           <Text as="u" color="blue">MiniCalendar Test Page</Text>
         </Link>

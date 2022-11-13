@@ -3,6 +3,7 @@ import { Text } from "@chakra-ui/react";
 import MiniCalendar from "../components/MiniCalendar";
 
 
+// Temporary page to test MiniCalendar component
 const TestMiniCalendar = () => {
   return (
     <div>
