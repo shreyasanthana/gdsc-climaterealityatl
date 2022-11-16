@@ -4,7 +4,7 @@ import React from "react";
 const MiniCalendar = () => {
   return (
     <div>
-      MiniCalendar
+      MiniCalendar React Component
     </div>
   )
 }

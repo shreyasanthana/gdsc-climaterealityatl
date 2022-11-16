@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 const TestHero = () => {
   return (
     <div>
-      <Text fontSize="2xl" mb={5}>TestMiniCalendar</Text>
+      <Text fontSize="2xl" mb={5}>Hero Test Page</Text>
       <Hero />
     </div>
   )

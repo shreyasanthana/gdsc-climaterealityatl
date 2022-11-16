@@ -1,12 +1,13 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
 
-const Hero = () => {
+
+const TestHome = () => {
   return (
     <div>
-      Hero React Component
+      <Text fontSize="2xl" mb={5}>Home Test Page</Text>
     </div>
   )
 }
 
-export default Hero
+export default TestHome
