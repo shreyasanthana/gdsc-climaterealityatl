@@ -18,6 +18,9 @@ const Navbar = () => {
         <Link href="/testminicalendar">
           <Text as="u" color="blue">MiniCalendar Test Page</Text>
         </Link>
+         <Link href="/testdonation">
+          <Text as="u" color="blue">Donation Test Page</Text>
+        </Link>
       </HStack>
     </div>
   )

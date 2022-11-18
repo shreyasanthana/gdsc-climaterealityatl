@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import TestHome from "./pages/TestHome";
 import TestHero from "./pages/TestHero";
 import TestMiniCalendar from "./pages/TestMiniCalendar";
+import TestDonation from "./pages/TestDonation";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/testhome" element={<TestHome />} />
           <Route path="/testhero" element={<TestHero />} />
           <Route path="/testminicalendar" element={<TestMiniCalendar />} />
+          <Route path="/testdonation" element={<TestDonation />} />
         </Routes>
       </div>
     </ChakraProvider>
