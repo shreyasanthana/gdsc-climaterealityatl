@@ -6,7 +6,7 @@ import Donation from "../components/Donation";
 const TestDonation = () => {
   return (
     <div>
-      <Text fontSize="2xl" mb={5}>Donation Test Page</Text>
+      <Text fontSize="2xl" mb={5}>Tooni's Donation Test Page</Text>
       <Donation />
     </div>
   )
