@@ -18,6 +18,7 @@ function App() {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
+          <Text fontSize='2xl'>(2xl) In love with React & Next</Text>
           <VStack spacing={8}>
             <Logo h="40vmin" pointerEvents="none" />
             <Text>
