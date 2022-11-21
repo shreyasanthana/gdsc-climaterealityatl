@@ -9,11 +9,14 @@ import {
   Grid,
   theme,
   GridItem,
+  FormControl,
+  FormLabel,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
-import { Textarea } from '@chakra-ui/react'
-
+import { Input } from '@chakra-ui/react'
+import { Textarea } from '@chakra-ui/react';
+import {NumberInput} from '@chakra-ui/react'
 function App() {
   return (
     <ChakraProvider theme={theme}>
@@ -21,12 +24,41 @@ function App() {
         
         <Grid minH="100vh" p={3} templateColumns='repeat(5, 1fr)'>
         <GridItem colSpan={2}>
-            <VStack spacing={8}>
+            <VStack spacing={5}>
             <Text fontSize="l"> Have a suggestion? Leave it here! </Text>
             <Box textAlign="left" fontsize="m" w='100%'>
-              <Text fontSize="md">   What is your name? </Text>
-              <Textarea placeholder='Here is a sample textbox' />
+              <FormControl isRequired>
+                <FormLabel> Name: </FormLabel>
+                <Input placeholder="First and Last Name" />
+              </FormControl>
             </Box>
+
+            <Box textAlign="left" fontsize="m" w='100%'>
+            <FormControl isRequired>
+                <FormLabel> Email Address </FormLabel>
+                <Input type='email' placeholder='username@website.com'/>
+              </FormControl>
+            </Box>
+
+            <Box textAlign="left" fontsize="m" w='100%'>
+            <FormControl>
+                <FormLabel> Age </FormLabel>
+                <Input type='number' placeholder='18'/>
+              </FormControl>
+            </Box>
+
+            <Box textAlign="left" fontsize="m" w='100%'>
+            <FormControl>
+                <FormLabel> Phone Number: </FormLabel>
+                <Input type='tel' placeholder='000-000-0000'/>
+              </FormControl>
+            </Box>
+
+            <Box textAlign="left" fontsize="m" w='100%'>
+            <Text fontsize="md"> Suggestion: </Text>
+            <Textarea placeholder="Write your suggestion here!" />
+            </Box>
+
             </VStack>
           </GridItem>
 
