@@ -8,17 +8,30 @@ import {
   Code,
   Grid,
   theme,
+  GridItem,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import { Textarea } from '@chakra-ui/react'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
+        
+        <Grid minH="100vh" p={3} templateColumns='repeat(5, 1fr)'>
+        <GridItem colSpan={2}>
+            <VStack spacing={8}>
+            <Text fontSize="l"> Have a suggestion? Leave it here! </Text>
+            <Box textAlign="left" fontsize="m" w='100%'>
+              <Text fontSize="md">   What is your name? </Text>
+              <Textarea placeholder='Here is a sample textbox' />
+            </Box>
+            </VStack>
+          </GridItem>
+
+          <GridItem colSpan={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
-          <Text fontSize='2xl'>(2xl) In love with React & Next</Text>
           <VStack spacing={8}>
             <Logo h="40vmin" pointerEvents="none" />
             <Text>
@@ -34,8 +47,10 @@ function App() {
               Learn Chakra
             </Link>
           </VStack>
+          </GridItem>
         </Grid>
-      </Box>
+      </Box>  
+      
     </ChakraProvider>
   );
 }
