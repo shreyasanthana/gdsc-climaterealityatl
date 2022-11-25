@@ -1,0 +1,176 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  $primary-color: #E6015C;
+  $secondary-color: #3F3D55;
+  $secondary-120:#3E3C53;
+  $background-color: #FFF9FB;
+  
+  .formWrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .formbackground {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      background-color: #fff9fb90;
+    }
+  
+    .contactForm {
+      z-index: 3;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .contactFormWrapper {
+        border-radius: 12px;
+        margin: auto;
+        background-color:  $secondary-color;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        width: 90%;
+  
+        // @include for-large {
+        //   width: 50%;
+        // }
+  
+        // @include for-xxlarge {
+        //   width: 35%;
+        // }
+        .contactLabel {
+          color:  $primary-color;
+          font-size: 2rem;
+          font-family: monospace;
+          font-weight: 500;
+          letter-spacing: 1.4px;
+          text-transform: uppercase;
+          margin: 2rem 0rem 2rem 2rem;
+        }
+        .formheader {
+          width: 100%;
+          background:  $primary-color;
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          padding: 1.5rem 2rem;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+          .cross {
+            cursor: pointer;
+            svg {
+              font-size: 3rem;
+              color:  $background-color;
+            }
+          }
+  
+          .sm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+  
+            a {
+              margin: 0;
+              padding: 0;
+              font-size: 2.2rem;
+              color:  $secondary-120;
+  
+              svg {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+  
+        .formcontact {
+          padding: 2rem;
+          
+          .afterForm {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color:  $background-color;
+            letter-spacing: 0.2rem;
+          }
+          form {
+            display:grid;
+          grid-template-columns: repeat(2,1fr);
+            fieldset {
+              border: none;
+              margin-bottom: 2rem;
+              label {
+                display: block;
+                text-align: left;
+                color:  $primary-color;
+                font-weight: 500;
+                letter-spacing: 0.2rem;
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+              }
+  
+              input,
+              textarea {
+                width: 100%;
+                margin-top: 1rem;
+                border: none;
+                outline: 0;
+                color:  $background-color;
+                letter-spacing: 0.2rem;
+                font-size: 1.6rem;
+                background-color: transparent;
+                border-bottom: 1px solid  $primary-color;
+  
+                &:focus{
+                  color:  $background-color;
+                  background-color: transparent;
+  
+                }
+                &:active{
+                  color:  $background-color;
+                  background-color: transparent;
+  
+                }
+              }
+            }
+  
+            button {
+              background-color:  $primary-color;
+              border: none;
+              color:  $secondary-color;
+              font-weight: bolder;
+              font-size: 1.8rem;
+              font-family: "Sirin Stencil";
+              text-transform: uppercase;
+              letter-spacing: 1.8px;
+              width: 80%;
+              border-radius: 12px;
+              margin: auto;
+              padding: 0.6rem;
+              border: 2px solid transparent;
+              cursor: pointer;
+  
+              &:hover {
+                border-color:  $primary-color;
+                background-color: transparent;
+                color:  $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,3 +1,4 @@
+import Form from "./Forms";
 import React from 'react';
 import {
   ChakraProvider,
@@ -19,6 +20,10 @@ import { Textarea } from '@chakra-ui/react';
 import {NumberInput} from '@chakra-ui/react'
 function App() {
   return (
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         
@@ -84,6 +89,30 @@ function App() {
       </Box>  
       
     </ChakraProvider>
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+    <div className="App">
+      <div className="formWrapper">
+        <div className="contactForm">
+          <Form />
+        </div>
+      </div>
+    </div>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   );
 }
 
