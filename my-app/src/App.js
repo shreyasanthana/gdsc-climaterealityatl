@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, setState, useEffect } from "react";
 import {
   ChakraProvider,
   Box,
@@ -7,28 +7,61 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  // theme,
 } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Logo } from "./Logo";
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home";
 import TestHome from "./pages/TestHome";
 import TestHero from "./pages/TestHero";
 import TestMiniCalendar from "./pages/TestMiniCalendar";
 import TestDonation from "./pages/TestDonation";
+import About from "./pages/About";
+import Events from "./pages/Events";
+import GetInvolved from "./pages/GetInvolved";
+import Contact from "./pages/Contact";
+
+
 import Navbar from "./components/Navbar";
 
+// To do: evaluate if these two imports needed
+import '@fontsource/merriweather-sans/400.css'
+import '@fontsource/lato/900.css'
+
+import theme from "./theme";
+
+
 function App() {
+
+  // Change Navbar bg color if not home page to
+  //  follow theme of national website
+  const [navBg, setNavBg] = useState("red")
+  const location = useLocation();
+  useEffect(()=>
+    {
+      if(location.pathname === "/" || location.pathname === "/home"){
+        setNavBg("transparent");
+      } else {
+        setNavBg("black");
+      }
+    },[location]);
+
+
   return (
     <ChakraProvider theme={theme}>
       <div>
-        <Navbar />
-
+        <Navbar navBgColor={ navBg }/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/testhome" element={<TestHome />} />
-          <Route path="/testhero" element={<TestHero />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/getinvolvedr" element={<GetInvolved />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* To do: Remove temporary routes below after testing completed */}
           <Route path="/testminicalendar" element={<TestMiniCalendar />} />
           <Route path="/testdonation" element={<TestDonation />} />
         </Routes>
