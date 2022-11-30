@@ -1,29 +1,47 @@
 import React from "react";
-import { HStack, Link, Text } from "@chakra-ui/react";
+import { HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box } from "@chakra-ui/react";
+const Logo = "CRP_Atlanta_white_transp_300x90.png";
 
 
-const Navbar = () => {
+// To install heading and body fonts (which are reflected in Theme.js):
+//  npm install @fontsource/lato    // substituted for nat'l website's BrandonGrotesque
+//  npm install @fontsource/merriweather-sans
+//  Comment: Could alternatively impor fonts as link in styles.css file
+
+
+const Navbar = ({ navBgColor }) => {
   return (
-    <div>
-     <HStack spacing="48px" mt={2} mb={5}>
-        <Link href="/">
-          <Text as="u" color="blue">Home</Text>
-        </Link>
-         <Link href="/testhome">
-          <Text as="u" color="blue">Home Test Page</Text>
-        </Link>
-        <Link href="/testhero">
-          <Text as="u" color="blue">Hero Test Page</Text>
-        </Link>
-        <Link href="/testminicalendar">
-          <Text as="u" color="blue">MiniCalendar Test Page</Text>
-        </Link>
-         <Link href="/testdonation">
-          <Text as="u" color="blue">Donation Test Page</Text>
-        </Link>
-      </HStack>
-    </div>
+    <Flex bg={navBgColor} height="100px" width="100%" alignItems="center" position="absolute" zIndex={8}>
+      <Link href="/">
+        <Image src={Logo} alt="logo" ml={10} w="220px" h="66px" />
+      </Link>
+      <Spacer />
+      <Flex
+        as={Heading}
+        textTransform="uppercase"
+        alignItems="center"
+        color="white"
+      >
+        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/about">About</Link>
+        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/events">Events</Link>
+        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/getinvolved">Get Involved</Link>
+        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/contact">Contact</Link>
+        <Button
+          mr={10}
+          variant="outline"
+          textTransform="uppercase"
+          border="2px"
+          fontSize="lg"
+          letterSpacing="1px"
+          _hover={{
+            background:"brandGreen",
+          }}
+        >
+            donate
+          </Button>
+      </Flex>
+    </Flex>
   )
 }
 
-export default Navbar
+export default Navbar;
