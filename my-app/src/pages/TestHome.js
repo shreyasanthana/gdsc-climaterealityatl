@@ -1,12 +1,14 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 
 
 const TestHome = () => {
   return (
-    <div>
-      <Text fontSize="2xl" mb={5}>Home Test Page</Text>
-    </div>
+     <Box>
+      <Text position="relative" ml="10px" top="120px" fontSize="3xl" fontWeight="bold">
+        Test Home Page
+      </Text>
+    </Box>
   )
 }
 

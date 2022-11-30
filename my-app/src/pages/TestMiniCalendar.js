@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 import MiniCalendar from "../components/MiniCalendar";
 
 // Comment: Commenting out temporarily (see below)
@@ -9,10 +9,12 @@ import MiniCalendar from "../components/MiniCalendar";
 // Temporary page to test MiniCalendar component
 const TestMiniCalendar = () => {
   return (
-    <div>
-      <Text fontSize="2xl" mb={5}>TestMiniCalendar</Text>
-      < MiniCalendar />
-    </div>
+     <Box>
+      <Text position="relative" ml="10px" top="120px" fontSize="3xl" fontWeight="bold">
+        Test Mini Calendar
+      </Text>
+      <MiniCalendar />
+    </Box>
   )
 }
 

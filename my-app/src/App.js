@@ -62,6 +62,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           {/* To do: Remove temporary routes below after testing completed */}
+          <Route path="/testhome" element={<TestHome />} />
+          <Route path="/testhero" element={<TestHero />} />
           <Route path="/testminicalendar" element={<TestMiniCalendar />} />
           <Route path="/testdonation" element={<TestDonation />} />
         </Routes>
