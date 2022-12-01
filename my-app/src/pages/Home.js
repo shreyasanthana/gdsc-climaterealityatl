@@ -33,7 +33,7 @@ const Home = () => {
       <Text fontSize="3xl">Some more text</Text>
       <Text fontSize="3xl">Even more text</Text> */}
       </Box>
-      <Box mt="40px" zIndex={9}>
+      <Box mt="40px" ml="20px" zIndex={9}>
         <Text fontSize="3xl">Some text below</Text>
         <Text fontSize="3xl">Some more text below</Text>
         <Text fontSize="3xl">Even more text below</Text>
