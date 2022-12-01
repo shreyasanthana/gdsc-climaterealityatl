@@ -1,7 +1,8 @@
 import React from "react";
 import { Text, Heading, Box, Image, Spacer, Flex } from "@chakra-ui/react";
-import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 const heroImage = "pexels-kelly-4320481.jpg";
+
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
           width="100%"
           height="600px"
           src={heroImage}
-          position="fixed"
+          position="absolute"
           objectFit="cover"
           zIndex={3}/>
           <Flex flexDirection="column" position="relative" mt="390px" ml="150px" gap="10px" zIndex={9}>
@@ -32,10 +33,13 @@ const Home = () => {
       <Text fontSize="3xl">Some more text</Text>
       <Text fontSize="3xl">Even more text</Text> */}
       </Box>
-      <Box mt="40px">
+      <Box mt="40px" zIndex={9}>
         <Text fontSize="3xl">Some text below</Text>
         <Text fontSize="3xl">Some more text below</Text>
         <Text fontSize="3xl">Even more text below</Text>
+      </Box>
+      <Box bg="black" height="150px" mt="30px">
+        <Footer />
       </Box>
     </Flex>
   )
