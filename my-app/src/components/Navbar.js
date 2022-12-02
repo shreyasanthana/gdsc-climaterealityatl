@@ -11,9 +11,18 @@ const Logo = "CRP_Atlanta_white_transp_300x90.png";
 
 const Navbar = ({ navBgColor }) => {
   return (
-    <Flex bg={navBgColor} height="100px" width="100%" alignItems="center" position="absolute" zIndex={8}>
-      <Link href="/">
-        <Image src={Logo} alt="logo" ml={10} w="220px" h="66px" />
+    <Flex
+      bg={navBgColor}
+      position="absolute"
+      height="100px"
+      width="100%"
+      alignItems="center"
+      zIndex={10}
+    >
+      <Link
+        href="/"
+      >
+        <Image src={Logo} alt="logo" ml={10} minW="220px" h="66px" />
       </Link>
       <Spacer />
       <Flex
