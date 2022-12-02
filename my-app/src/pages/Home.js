@@ -17,7 +17,7 @@ const Home = () => {
         <Box
           w='100%'
           h='200px'
-          bgGradient='linear(to-b, blue.400, transparent)'
+          bgGradient='linear(to-b, blue.200, transparent)'
           position="absolute"
           top="0px"
           opacity="0.5"
