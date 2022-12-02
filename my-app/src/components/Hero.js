@@ -12,7 +12,6 @@ const Hero = () => {
         position="absolute"
         top="0px"
         opacity="0.5"
-        zIndex={8}
       />
       <Box>
         <Image
@@ -21,7 +20,6 @@ const Hero = () => {
           src={heroImage}
           top="0"
           objectFit="cover"
-          zIndex={6}
         />
         <Flex
           flexDirection="column"
@@ -29,7 +27,6 @@ const Hero = () => {
           top="390px"
           left="150px"
           gap="10px"
-          zIndex={9}
         >
           <Text color="yellow" fontSize="4xl" fontWeight="bold">Some text inside Hero</Text>
           <Text color="yellow" fontSize="4xl" fontWeight="bold">Some more text inside Hero</Text>
