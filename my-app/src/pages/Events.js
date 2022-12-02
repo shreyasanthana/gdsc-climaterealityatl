@@ -3,10 +3,36 @@ import { Text, Box } from "@chakra-ui/react";
 
 const Events = () => {
   return (
-    <Box>
-      <Text position="relative" ml="10px" top="120px" fontSize="3xl" fontWeight="bold">
-        Events
-      </Text>
+    <Box id="page-container"
+      // w="100%"
+      minHeight="100vh"
+      position="relative"
+    >
+      <Box id="content-wrap"
+        pb="120px"
+      >
+        <Text
+          pt="120px"
+          pl="20px"
+          fontSize="3xl"
+          fontWeight="bold"
+          color="black"
+          // h="600px"
+        >
+          Events
+          <br />
+          <br />
+          Some text
+          <br />
+          More text
+          <br />
+          And more text
+          <br />
+          Even more text
+          <br />
+          Just taking up some room
+        </Text>
+      </Box>
     </Box>
   )
 }

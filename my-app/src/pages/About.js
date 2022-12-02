@@ -22,6 +22,7 @@ const About = () => {
         >
           About
           <br />
+          <br />
           Some text
           <br />
           More text
@@ -33,7 +34,6 @@ const About = () => {
           Just taking up some room
         </Text>
       </Box>
-      {/* <Footer /> */}
     </Box>
   )
 }
