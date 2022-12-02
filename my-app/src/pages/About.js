@@ -10,7 +10,7 @@ const About = () => {
       position="relative"
     >
       <Box id="content-wrap"
-        pb="120px"
+        pb="120px"  // for proper footer placement
       >
         <Text
           pt="120px"
