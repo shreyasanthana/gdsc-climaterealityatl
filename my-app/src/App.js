@@ -21,11 +21,14 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import GetInvolved from "./pages/GetInvolved";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 
 import Navbar from "./components/Navbar";
 
 // To do: evaluate if these two imports needed
+//  Header font: lato
+//  Text font: Merriweather
 import '@fontsource/merriweather-sans/400.css'
 import '@fontsource/lato/900.css'
 
@@ -67,6 +70,7 @@ function App() {
           <Route path="/testminicalendar" element={<TestMiniCalendar />} />
           <Route path="/testdonation" element={<TestDonation />} />
         </Routes>
+        <Footer />
       </div>
     </ChakraProvider>
   );
