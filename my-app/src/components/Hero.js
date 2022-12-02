@@ -31,9 +31,9 @@ const Hero = () => {
           gap="10px"
           zIndex={9}
         >
-          <Text color="yellow" fontSize="4xl" fontWeight="bold">Some text</Text>
-          <Text color="yellow" fontSize="4xl" fontWeight="bold">Some more text</Text>
-          <Text color="yellow" fontSize="4xl" fontWeight="bold">Even more text</Text>
+          <Text color="yellow" fontSize="4xl" fontWeight="bold">Some text inside Hero</Text>
+          <Text color="yellow" fontSize="4xl" fontWeight="bold">Some more text inside Hero</Text>
+          <Text color="yellow" fontSize="4xl" fontWeight="bold">Even more text inside Hero</Text>
         </Flex>
       </Box>
     </Box>
