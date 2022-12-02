@@ -13,10 +13,7 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Logo } from "./Logo";
 import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home";
-import TestHome from "./pages/TestHome";
-import TestHero from "./pages/TestHero";
 import TestMiniCalendar from "./pages/TestMiniCalendar";
-import TestDonation from "./pages/TestDonation";
 import About from "./pages/About";
 import Events from "./pages/Events";
 import GetInvolved from "./pages/GetInvolved";
@@ -65,10 +62,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           {/* To do: Remove temporary routes below after testing completed */}
-          <Route path="/testhome" element={<TestHome />} />
-          <Route path="/testhero" element={<TestHero />} />
           <Route path="/testminicalendar" element={<TestMiniCalendar />} />
-          <Route path="/testdonation" element={<TestDonation />} />
         </Routes>
         <Footer />
       </div>
