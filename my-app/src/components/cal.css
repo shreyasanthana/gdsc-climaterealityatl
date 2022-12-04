@@ -1,3 +1,7 @@
+body {
+    color: #010101;
+}
+
 .calendar iframe {
     width: 97%;
     overflow-x: hidden;
@@ -7,4 +11,5 @@
 .cal-head {
     margin-top: 5px;
     text-align: center;
+    font-size: 2rem;
 }
