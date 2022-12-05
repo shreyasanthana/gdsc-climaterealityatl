@@ -12,7 +12,7 @@ const Footer = () => {
       height="120px"
     >
       <Text ml="10px" mt="5px" fontSize="xl" color="white">
-        Footer
+        Footer Test
       </Text>
     </Box>
   )
