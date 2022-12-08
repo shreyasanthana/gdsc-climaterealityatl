@@ -4,21 +4,22 @@ import { useDisclosure, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOv
 import { ImMenu, ImCross } from "react-icons/im";
 import MenuLinks from "./MenuLinks";
 
-const MobileDrawer = () => {
-  const {isOpen, onOpen, onClose } = useDisclosure();
+const MobileDrawer = ({ isOpen, onOpen, onClose }) => {
+  // const {isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Flex>
       <Button variant="unstyled" onClick={onOpen}>
         <ImMenu size="36px" color="white" />
-        <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+        <Drawer placement="right" onClose={onClose} isOpen={isOpen} display={{ base: "flex", lg: "none" }}>
           <DrawerOverlay />
           <DrawerContent bg="black">
+            <DrawerCloseButton size="lg" color="white"/>
             <DrawerHeader justify="right">
               <Flex display="flex" height="69px" alignItems="center" justifyContent="right">
-                <Button variant="unstyled" onClick={onClose}>
+                {/* <Button variant="unstyled" onClick={onClose}>
                   <ImCross size="26px" color="white" />
-                </Button>
+                </Button> */}
               </Flex>
             </DrawerHeader>
             <DrawerBody color="white">

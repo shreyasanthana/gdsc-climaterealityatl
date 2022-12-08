@@ -1,5 +1,5 @@
-import React from "react";
-import { HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box } from "@chakra-ui/react";
+import { useState, setState, React } from "react";
+import { useDisclosure, HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box } from "@chakra-ui/react";
 import MobileDrawer from "./MobileDrawer";
 import MenuLinks from "./MenuLinks";
 const Logo = "CRP_Atlanta_white_transp_300x90.png";
@@ -12,6 +12,17 @@ const Logo = "CRP_Atlanta_white_transp_300x90.png";
 
 
 const Navbar = ({ navBgColor }) => {
+  const {isOpen, onOpen, onClose } = useDisclosure();
+  // const [menuDisp, setMenuDisp] = useState("flex");
+
+  console.log("->: ", isOpen)
+  // if (!isOpen) {
+  //   setMenuDisp("none");
+  // } else {
+  //   setMenuDisp("flex");
+  // }
+
+
   return (
     <Flex
       bg={navBgColor}
@@ -27,11 +38,11 @@ const Navbar = ({ navBgColor }) => {
         <Image src={Logo} alt="logo" ml={10} minW="220px" h="66px" />
       </Link>
       <Spacer />
-      <Flex display={{ base: "none", lg: "flex" }}>
+      <Flex display={{ base: "none", lg: isOpen ? "none": "flex" }}>
         <MenuLinks flexDirProp="row" />
       </Flex>
       <Flex display={{ base: "flex", lg: "none" }} mr={8}>
-        <MobileDrawer />
+        <MobileDrawer isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       </Flex>
     </Flex>
   )
