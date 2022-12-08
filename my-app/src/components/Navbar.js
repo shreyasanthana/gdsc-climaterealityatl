@@ -1,5 +1,7 @@
 import React from "react";
 import { HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box } from "@chakra-ui/react";
+import MobileDrawer from "./MobileDrawer";
+import MenuLinks from "./MenuLinks";
 const Logo = "CRP_Atlanta_white_transp_300x90.png";
 
 
@@ -25,29 +27,11 @@ const Navbar = ({ navBgColor }) => {
         <Image src={Logo} alt="logo" ml={10} minW="220px" h="66px" />
       </Link>
       <Spacer />
-      <Flex
-        as={Heading}
-        textTransform="uppercase"
-        alignItems="center"
-        color="white"
-      >
-        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/about">About</Link>
-        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/events">Events</Link>
-        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/getinvolved">Get Involved</Link>
-        <Link mr={8} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/contact">Contact</Link>
-        <Button
-          mr={10}
-          variant="outline"
-          textTransform="uppercase"
-          border="2px"
-          fontSize="lg"
-          letterSpacing="1px"
-          _hover={{
-            background:"brandGreen",
-          }}
-        >
-            donate
-          </Button>
+      <Flex display={{ base: "none", lg: "flex" }}>
+        <MenuLinks flexDirProp="row" />
+      </Flex>
+      <Flex display={{ base: "flex", lg: "none" }} mr={8}>
+        <MobileDrawer />
       </Flex>
     </Flex>
   )

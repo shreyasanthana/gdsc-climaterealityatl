@@ -51,7 +51,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <div>
-        <Navbar navBgColor={ navBg }/>
+        <Navbar navBgColor={navBg}/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
