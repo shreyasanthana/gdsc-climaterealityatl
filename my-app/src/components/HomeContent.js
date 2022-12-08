@@ -16,19 +16,18 @@ const HomeContent = () => {
 
       {/* box containing text narrative */}
       <Box
-        width="70%"
-        border="1px"  // TODO: remove
+        width="100%"  // no calendar; w/calendar=70%
       >
         <HomeContentText />
       </Box>
 
       {/* box containing embedded responsive mini Calendar */}
-      <Box
+      {/* <Box
         width="30%"
         border="2px"  // TODO: possibly remove
       >
         <HomeCalendar />
-      </Box>
+      </Box> */}
     </Flex>
   )
 }

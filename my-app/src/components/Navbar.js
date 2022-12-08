@@ -13,15 +13,6 @@ const Logo = "CRP_Atlanta_white_transp_300x90.png";
 
 const Navbar = ({ navBgColor }) => {
   const {isOpen, onOpen, onClose } = useDisclosure();
-  // const [menuDisp, setMenuDisp] = useState("flex");
-
-  console.log("->: ", isOpen)
-  // if (!isOpen) {
-  //   setMenuDisp("none");
-  // } else {
-  //   setMenuDisp("flex");
-  // }
-
 
   return (
     <Flex
