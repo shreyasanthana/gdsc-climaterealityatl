@@ -8,7 +8,7 @@ import AboutPage from './pages/AboutPage';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <AboutPage></AboutPage>
+      <AboutPage />
     </ChakraProvider>
   );
 }
