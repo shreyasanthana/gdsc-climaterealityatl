@@ -4,7 +4,7 @@ import Calendar from "../components/Calendar";
 function EventPage() {
 
   return (
-    <Box>
+    <Box pt={'120px'} pb={'240px'}>
       <Calendar />
     </Box>
   );
