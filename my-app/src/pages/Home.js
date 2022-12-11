@@ -1,13 +1,21 @@
 import React from "react";
-import { Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Hero from "../components/Hero";
+import HomeContent from "../components/HomeContent";
 
 
 const Home = () => {
   return (
-    <div>
-      <Text fontSize="2xl" mb={5}>Home</Text>
-    </div>
+    <Flex
+      flexDirection="column"
+      w="100%"
+      minHeight="100vh"
+      position="relative"
+      pb="120px" // for proper footer placement
+    >
+      <Hero />
+      <HomeContent />
+    </Flex>
   )
 }
 
