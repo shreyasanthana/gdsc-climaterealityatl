@@ -4,8 +4,13 @@ import { SimpleGrid } from "@chakra-ui/react"
 
 export default function AboutPage() {
     return (
-        <div >
-            <h1 style={{ paddingTop: "2%", paddingBottom: "2.5%", fontSize: '30px', textAlign: "center" }}>This is the About Page Header</h1>
+        <div>
+            <h1 style={{ paddingTop: "2%", paddingBottom: "2.5%", fontSize: '30px', textAlign: "center" }}>About Us</h1>
+
+            <p style={{ textAlign: 'center', marginRight: '10vw', marginLeft: '10vw' }}>We’re a diverse group of passionate individuals who’ve come together to solve the greatest challenge of our time. We are activists, cultural leaders, organizers, scientists, and storytellers committed to building a sustainable future together. At The Climate Reality Project: Atlanta Chapter, we strive to play a crucial role in promoting clean, efficient, and sustainable consumption, energy generation, and transportation practices while promoting an equitable division of benefits and costs throughout Georgia and the Atlanta area. Here at the Atlanta Chapter of The Climate Reality Project, we’re committed to investing our expertise and resources in order to further achieve our cause.</p>
+
+            <br />
+
             <SimpleGrid columns={[1, 1, 2, 3]} spacing={10} pr="15px" pl="15px">
                 <ProfileCard name="Vince" role="Lead" email="test@gmail.com" phone_number="(472) 472-3883" linkedin="www.linkedin.com/test/" instagram="@test.gatech" />
                 <ProfileCard name="Maddy" role="Developer" email="maddy@gmail.com" phone_number="(872) 826-2245" linkedin="https://www.linkedin.com/in/maddy/" instagram="@test.gatech" />
