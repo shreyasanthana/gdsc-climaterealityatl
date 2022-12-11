@@ -1,0 +1,15 @@
+body {
+    color: #010101;
+}
+
+.calendar iframe {
+    width: 97%;
+    overflow-x: hidden;
+    margin-left: 1.5%;
+}
+
+.cal-head {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 2rem;
+}
