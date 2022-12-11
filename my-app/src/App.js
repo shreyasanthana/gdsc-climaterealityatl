@@ -12,7 +12,7 @@ import {
 import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home";
 import TestMiniCalendar from "./pages/TestMiniCalendar";
-import About from "./pages/About";
+import AboutPage from "./pages/AboutPage";
 import EventsPage from "./pages/EventsPage";
 import GetInvolved from "./pages/GetInvolved";
 import Contact from "./pages/Contact";
@@ -52,9 +52,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/getinvolved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
 
