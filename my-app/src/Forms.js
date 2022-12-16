@@ -17,17 +17,18 @@ import { Logo } from './Logo';
 import { Input } from '@chakra-ui/react'
 import { Textarea } from '@chakra-ui/react';
 import {NumberInput} from '@chakra-ui/react'
+import 'react-phone-number-input/style.css'
 
 const Form = () => {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
-    //name, email, age, phone number, previously involved in climate change activism, suggestion? 
+    //name, email, age, phone number, previously involved in climate change activism, suggestion
     "entry.90026055": "",
     "entry.1831593027": "",
     "entry.1866223984": "",
     "entry.1584917209": "",
-    //button???
-    "entry.1509076509": ""
+    "entry.1509076509": "",
+    "entry.1919208991": ""
 
   });
 
@@ -44,7 +45,7 @@ const Form = () => {
     e.preventDefault();
     setSubmit(true);
 
-    let url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmvxm0fJezJe_oB3onPYLuUWYU595fMFJzZkjzguOf-rJeKg/formResponse?entry.90026055=${formData["entry.90026055"]}&entry.1831593027=${formData["entry.1831593027"]}&entry.1866223984=${formData["entry.1866223984"]}&entry.1584917209=${formData["entry.1584917209"]}&entry.1509076509=${formData["entry.1509076509"]}`;
+    let url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmvxm0fJezJe_oB3onPYLuUWYU595fMFJzZkjzguOf-rJeKg/formResponse?entry.90026055=${formData["entry.90026055"]}&entry.1831593027=${formData["entry.1831593027"]}&entry.1866223984=${formData["entry.1866223984"]}&entry.1584917209=${formData["entry.1584917209"]}&entry.1509076509=${formData["entry.1509076509"]}&entry.1919208991=${formData["entry.1919208991"]}`;
 
     const res = await fetch(url, {
       method: "POST",
@@ -69,7 +70,7 @@ const Form = () => {
               <GridItem colSpan={2}>
                   <VStack spacing={5}>
                   <Text fontSize="l"> Have a suggestion? Leave it here! </Text>
-                  <Box textAlign="left" fontsize="m" w='100%'>
+                  <Box textAlign="left" fontSize="m" w='100%'>
                     <FormControl isRequired>
                       <FormLabel> Name: </FormLabel>
                       <Input
@@ -84,7 +85,7 @@ const Form = () => {
                     </FormControl>
                   </Box>
       
-                  <Box textAlign="left" fontsize="m" w='100%'>
+                  <Box textAlign="left" fontSize="m" w='100%'>
                   <FormControl isRequired>
                       <FormLabel> Email Address </FormLabel>
                       <Input
@@ -99,13 +100,12 @@ const Form = () => {
                     </FormControl>
                   </Box>
       
-                  <Box textAlign="left" fontsize="m" w='100%'>
+                  <Box textAlign="left" fontSize="m" w='100%'>
                   <FormControl>
                       <FormLabel> Age </FormLabel>
                       <Input
                         type='number'
                         placeholder="18"
-                        required
                         name="entry.1866223984"
                         onChange={handleInputData("entry.1866223984")}
                         value={formData["entry.1866223984"]}
@@ -114,13 +114,13 @@ const Form = () => {
                     </FormControl>
                   </Box>
       
-                  <Box textAlign="left" fontsize="m" w='100%'>
+                  <Box textAlign="left" fontSize="m" w='100%'>
                   <FormControl>
                       <FormLabel> Phone Number: </FormLabel>
                       <Input
+                        maxLength={10}
                         type='tel'
-                        placeholder='000-000-0000'
-                        required
+                        placeholder='Please only enter the 10 digits of your phone number (no dashes or spaces)'
                         name="entry.1584917209"
                         onChange={handleInputData("entry.1584917209")}
                         value={formData["entry.1584917209"]}
@@ -129,8 +129,8 @@ const Form = () => {
                     </FormControl>
                   </Box>
       
-                  <Box textAlign="left" fontsize="m" w='100%'>
-                  <Text fontsize="md"> Suggestion: </Text>
+                  <Box textAlign="left" fontSize="m" w='100%'>
+                  <Text fontSize="md"> Suggestion: </Text>
                   <Textarea
                     placeholder="Write your suggestion here!"
                     required
@@ -142,111 +142,30 @@ const Form = () => {
                     autoComplete={false}
                   ></Textarea>
                   </Box>
+
+                <Box textAlign="left" fontSize="m" w='100%'>
+                  <Text fontSize="md"> Any questions, comments, and/or concerns?: </Text>
+                  <Textarea
+                    placeholder="Write them here!"
+                    name="entry.1919208991"
+                    rows="4"
+                    cols="100"
+                    onChange={handleInputData("entry.1919208991")}
+                    value={formData["entry.1919208991"]}
+                    autoComplete={false}
+                  ></Textarea>
+                  </Box>
                   <button type="submit">Connect</button>
                   </VStack>
-                </GridItem>
-      
-                <GridItem colSpan={3}>
-                <ColorModeSwitcher justifySelf="flex-end" />
-                <VStack spacing={8}>
-                  <Logo h="40vmin" pointerEvents="none" />
-                  <Text>
-                    Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-                  </Text>
-                  <Link
-                    color="teal.500"
-                    href="https://chakra-ui.com"
-                    fontSize="2xl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Learn Chakra
-                  </Link>
-                </VStack>
                 </GridItem>
               </Grid>
             </Box>  
             
           </ChakraProvider>
-
-          
-            {/* <fieldset>
-              <label htmlFor="entry.90026055">Name:</label>
-              <input
-                required
-                type="email"
-                name="entry.1831593027"
-                onChange={handleInputData("entry.1831593027")}
-                value={formData["entry.1831593027"]}
-                autoComplete={false}
-              />
-            </fieldset>
-
-            <fieldset>
-              <label htmlFor="entry.1831593027">E-mail:</label>
-              <input
-                required
-                type="email"
-                name="entry.1831593027"
-                onChange={handleInputData("entry.1831593027")}
-                value={formData["entry.1831593027"]}
-                autoComplete={false}
-              />
-            </fieldset>
-
-            <fieldset>
-              <label htmlFor="entry.1866223984">Age:</label>
-              <input
-                required
-                name="entry.1866223984"
-                onChange={handleInputData("entry.1866223984")}
-                value={formData["entry.1866223984"]}
-                autoComplete={false}
-              ></input>
-            </fieldset>
-
-            <fieldset>
-              <label htmlFor="entry.1584917209">Phone Number:<br />(format ex. xxx-xxx-xxxx)</label>
-              <input
-                required
-                name="entry.1584917209"
-                onChange={handleInputData("entry.1584917209")}
-                value={formData["entry.1584917209"]}
-                autoComplete={false}
-              ></input>
-            </fieldset>
-
-            <fieldset>
-              <label htmlFor="entry.1509076509">Enter your suggestion below:</label>
-              <textarea
-                required
-                name="entry.1509076509"
-                rows="4"
-                cols="100"
-                onChange={handleInputData("entry.1509076509")}
-                value={formData["entry.1509076509"]}
-                autoComplete={false}
-              ></textarea>
-            </fieldset>
-
-            <button type="submit">Connect</button> */}
           </form>
         )}
       </div>
     </div>
-    /*
-    put this before last one
-                <fieldset>
-              <label htmlFor="entry.1451219623">Previously involved in climate change activism?</label>
-              <input
-                required
-                name="entry.1451219623"
-                onChange={handleInputData("entry.1451219623")}
-                value={formData["entry.1451219623"]}
-                autoComplete={false}
-              ></input>
-            </fieldset>
-            */
   );
 };
 
