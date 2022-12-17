@@ -29,11 +29,8 @@ const HomeContentText = () => {
             <Text fontSize="xl">starts with people like you.</Text>
           </Flex>
         </Flex>
-
-
       </Flex>
     </Flex>
-
   )
 }
 
