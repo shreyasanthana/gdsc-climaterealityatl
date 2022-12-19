@@ -56,9 +56,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/getinvolved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* To do: Remove temporary routes below after testing completed */}
-          <Route path="/testminicalendar" element={<TestMiniCalendar />} />
         </Routes>
         <Footer />
       </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 
+// *** Comment: This is a component and not a page ***
 const Donation = () => {
   return (
     <div>
@@ -10,7 +11,7 @@ const Donation = () => {
         Donation Button
         </Button>
       </a>
-      
+
     </div>
   )
 }

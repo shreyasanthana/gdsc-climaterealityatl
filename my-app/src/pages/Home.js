@@ -11,7 +11,7 @@ const Home = () => {
       w="100%"
       minHeight="100vh"
       position="relative"
-      pb="120px" // for proper footer placement
+      pb="40px" // for proper footer placement
     >
       <Hero />
       <HomeContent />
