@@ -8,7 +8,8 @@ const MenuLinks = ({ flexDirProp }) => {
   const mb = (flexDirProp === "column" ? 3 : 0);
   const mt = (flexDirProp === "column" ? 8: 0);
   const alignItems = (flexDirProp === "column" ? "left" : "center");
-  const mr = (flexDirProp === "column" ? "auto": 8);
+  const mr = (flexDirProp === "column" ? "auto" : 8);
+  const mbBut = (flexDirProp === "column"? 0 : "1px")
 
   return (
     <Flex
@@ -22,22 +23,20 @@ const MenuLinks = ({ flexDirProp }) => {
         <Link mr={mr} mb={mb} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/events">Events</Link>
         <Link mr={mr} mb={mb} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/getinvolved">Get Involved</Link>
         <Link mr={mr} mb={mb} fontSize="lg" letterSpacing="1px" _hover={{ color:"brandGreen" }} href="/contact">Contact</Link>
-        <Link href={DonateLink} target="_blank">
+        <Link href={DonateLink} isExternal style={{textDecoration:"none"}}>
           <Button
             mr={mr}
             mt={mt}
+            mb={mbBut}
             variant="outline"
-            textTransform="uppercase"
             border="2px"
-            fontSize="lg"
-            letterSpacing="1px"
-            // bg="blue.700"
+            bg="gray.600"
             _hover={{
               background:"brandGreen",
             }}
           >
-            donate
-            {/* <HiOutlineExternalLink size="20px" ml="30px" /> */}
+            <Heading fontSize="lg" letterSpacing="1px" textTransform="uppercase" mr="5px">donate</Heading>
+            <HiOutlineExternalLink size="22px"/>
           </Button>
         </Link>
       </Flex>
