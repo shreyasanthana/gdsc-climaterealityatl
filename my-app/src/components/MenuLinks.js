@@ -36,7 +36,7 @@ const MenuLinks = ({ flexDirProp }) => {
             }}
           >
             <Heading fontSize="lg" letterSpacing="1px" textTransform="uppercase" mr="5px">donate</Heading>
-            <HiOutlineExternalLink size="22px"/>
+            <HiOutlineExternalLink size="22px" />
           </Button>
         </Link>
       </Flex>
