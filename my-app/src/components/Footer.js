@@ -1,8 +1,10 @@
 import React from "react";
 import { HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box, DefaultIcon, IconButton, VStack, calc } from "@chakra-ui/react";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Logo = "CRP_Atlanta_white_transp_300x90.png";
+const DonateLink = "https://www.climaterealityproject.org/donate/chapters-support-climate-reality-project-atlanta-ga";
 
 const Footer = () => {
   return (
@@ -41,7 +43,13 @@ const Footer = () => {
             <Link fontSize="12pt" letterSpacing="1px" color="white" _hover={{ color: "brandGreen" }} href="/events">Events</Link>
             <Link fontSize="12pt" letterSpacing="1px" color="white" _hover={{ color: "brandGreen" }} href="/getInvolved">Get Involved</Link>
             <Link fontSize="12pt" letterSpacing="1px" color="white" _hover={{ color: "brandGreen" }} href="/getinvolved">Contact Us</Link>
-            <Link fontSize="12pt" letterSpacing="1px" color="white" _hover={{ color: "brandGreen" }} href="/">Donate</Link>
+            <Flex>
+              <Flex align="center" as={Link} fontSize="12pt" letterSpacing="1px" color="white" _hover={{ color: "brandGreen" }} href={DonateLink} isExternal style={{textDecoration: "none"}}>
+                Donate
+                <Spacer width="6px" />
+                <HiOutlineExternalLink size="20px" />
+              </Flex>
+            </Flex>
           </Flex>
         </Flex>
 
