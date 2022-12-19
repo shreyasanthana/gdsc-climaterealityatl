@@ -17,6 +17,8 @@ import EventsPage from "./pages/EventsPage";
 import GetInvolved from "./pages/GetInvolved";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import Donate from "./components/Donation";
+
 
 
 import Navbar from "./components/Navbar";
@@ -56,6 +58,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/getinvolved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
+
 
           {/* To do: Remove temporary routes below after testing completed */}
           <Route path="/testminicalendar" element={<TestMiniCalendar />} />
