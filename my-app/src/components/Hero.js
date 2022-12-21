@@ -15,13 +15,19 @@ const Hero = () => {
         opacity="0.5"
       />
       <Box>
-        <Image
-          width="100%"
-          height="600px"
-          src={heroImage}
-          top="0"
-          objectFit="cover"
-        />
+        <Flex flexDirection="column" position="relative">
+          <Image
+            width="100%"
+            height="600px"
+            src={heroImage}
+            top="0"
+            objectFit="cover"
+          />
+          <Text color="white" fontSize="medium" position="absolute" bottom="0px" alignSelf="end" mr={2}>
+            Photo of solar farm in Rossville, GA by <Link href="https://www.instagram.com/kellymlacy/" target="_blank" textDecoration="underline">Kelly</Link> via <Link href="https://www.pexels.com" target="_blank" textDecoration="underline">Pexels.com</Link>
+          </Text>
+        </Flex>
+
         <Flex
           width={{ base: "100%", lg: "70%" }}
           position="absolute"
