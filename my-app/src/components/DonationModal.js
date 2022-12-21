@@ -7,7 +7,7 @@ const DonateLink = "https://www.climaterealityproject.org/donate/chapters-suppor
 const DonationModal = ({ flexDirProp }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const mb = (flexDirProp === "column" ? 3 : 0);
-  const mt = (flexDirProp === "column" ? 8: 0);
+  const mt = (flexDirProp === "column" ? "50px": 0);
   const alignItems = (flexDirProp === "column" ? "left" : "center");
   const mr = (flexDirProp === "column" ? "auto" : 8);
   const mbBut = (flexDirProp === "column"? 0 : "3px")
@@ -40,19 +40,19 @@ const DonationModal = ({ flexDirProp }) => {
           
           <ModalBody>
             <Text fontSize="lg">
-              By clicking the 'Continue' button, you will be taken to a new browser tab or window for the national website where you can donate to the Atlanta chapter and help local activists protect our planet, fight back against the climate crisis, and make our community a safer, healthier place for families. Return to our chapter website afterwards by closing the tab or window.
+              Clicking 'Next' opens a new browser tab or window taking you to the national website, where you can donate to the Atlanta chapter and help local activists protect our planet, fight back against the climate crisis, and make our community safer and healthier. Return to our chapter website afterwards by closing the tab or window.
             </Text>
           </ModalBody>
 
           <ModalFooter>
             <Flex flexDirection="column">
               <Flex justifyContent="end">
-                <Button variant="ghost" mr={3} onClick={onClose}>
-                  <Heading size="8px" fontWeight="100" style={{textDecoration: "underline"}}>Cancel</Heading>
+                <Button variant="link" mr={5} onClick={onClose}>
+                  <Text fontWeight="lighter" color="black" fontFamily="sans-serif" textDecoration="underline" fontSize="sm">Cancel</Text>
                 </Button>
                 <a href={DonateLink} target="_blank">
                   <Button colorScheme="blue" onClick={onClose}>
-                    Continue
+                    <Text fontFamily="sans-serif" fontSize="md" textDecoration="underline">Next</Text>
                   </Button>
                 </a>
               </Flex>
