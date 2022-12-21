@@ -6,19 +6,17 @@ const DonateLink = "https://www.climaterealityproject.org/donate/chapters-suppor
 
 const DonationModal = ({ flexDirProp }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const mb = (flexDirProp === "column" ? 3 : 0);
-  const mt = (flexDirProp === "column" ? "50px": 0);
-  const alignItems = (flexDirProp === "column" ? "left" : "center");
-  const mr = (flexDirProp === "column" ? "auto" : 8);
-  const mbBut = (flexDirProp === "column"? 0 : "3px")
+  const marginTop = (flexDirProp === "column" ? "50px": 0);
+  const marginRt = (flexDirProp === "column" ? "auto" : 8);
+  const marginBot = (flexDirProp === "column"? 0 : "3px")
 
   return (
     <div>
       <Button
         onClick={onOpen}
-        mr={mr}
-        mt={mt}
-        mb={mbBut}
+        mr={marginRt}
+        mt={marginTop}
+        mb={marginBot}
         variant="outline"
         border="2px"
         bg="#194173"
@@ -31,16 +29,16 @@ const DonationModal = ({ flexDirProp }) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          
+
           <ModalHeader>
             Make a Donation
           </ModalHeader>
-          
+
           <ModalCloseButton />
-          
+
           <ModalBody>
             <Text fontSize="lg">
-              Clicking 'Next' opens a new browser tab or window taking you to the national website, where you can donate to the Atlanta chapter and help local activists protect our planet, fight back against the climate crisis, and make our community safer and healthier. Return to our chapter website afterwards by closing the tab or window.
+              Clicking 'Next' opens a new browser tab or window of a web page from the national website where you can donate to our Atlanta chapter and help local activists protect our planet, fight back against the climate crisis, and make our community safer and healthier. Return to our chapter website afterwards by closing the tab or window.
             </Text>
           </ModalBody>
 
@@ -59,7 +57,7 @@ const DonationModal = ({ flexDirProp }) => {
               <Text fontSize="sm" mt={8}>
                 The Alliance for Climate Protection d/b/a The Climate Reality Project is a nonprofit, tax-exempt charitable organization under Section 501(c)(3) of the Internal Revenue Code. Donations are tax-deductible as allowed by law.
               </Text>
-            </Flex>  
+            </Flex>
           </ModalFooter>
         </ModalContent>
       </Modal>
