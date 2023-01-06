@@ -1,41 +1,22 @@
-import React from "react";
-import { Text, Box } from "@chakra-ui/react";
+import GetInvolvedContent from "../components/GetInvolvedContent"
+import { Flex } from "@chakra-ui/react";
+
+// import theme from "./theme";
+// gdsc-climaterealityatl/my-app/src/assets
 
 const GetInvolved = () => {
   return (
-    <Box id="page-container"
-      // w="100%"
+    <Flex
+      flexDirection="column"
+      w="100%"
       minHeight="100vh"
       position="relative"
+      pb="120px" // for proper footer placement
     >
-      <Box id="content-wrap"
-        pb="120px"
-      >
-        <Text
-          pt="120px"
-          pl="20px"
-          fontSize="3xl"
-          fontWeight="bold"
-          color="black"
-          // h="600px"
-        >
-          Get Involved
-          <br />
-          <br />
-          Some text
-          <br />
-          More text
-          <br />
-          And more text
-          <br />
-          Even more text
-          <br />
-          Just taking up some room
-        </Text>
-      </Box>
-      {/* <Footer /> */}
-    </Box>
+      <GetInvolvedContent />
+    </Flex>
+
   )
 }
 
-export default GetInvolved;
+export default GetInvolved

@@ -1,39 +1,28 @@
 import React from "react";
-import { Text, Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
+import ContactForm from "../components/ContactForm";
+
 
 const Contact = () => {
   return (
-    <Box id="page-container"
-      // w="100%"
-      minHeight="100vh"
-      position="relative"
-    >
-      <Box id="content-wrap"
-        pb="120px"
-      >
-        <Text
-          pt="120px"
-          pl="20px"
-          fontSize="3xl"
-          fontWeight="bold"
-          color="black"
-          // h="600px"
-        >
-          Contact
-          <br />
-          <br />
-          Some text
-          <br />
-          More text
-          <br />
-          And more text
-          <br />
-          Even more text
-          <br />
-          Just taking up some room
-        </Text>
+<Box pt={'150px'} pb={'240px'}> 
+        <Container
+          centerContent
+          position = 'relative'
+          maxW = 'contain.lg'>
+          <Box
+          position = 'relative'
+          borderWidth='4px'
+          borderRadius='lg' 
+          borderColor = '#8DC63F'
+          w = {{ sm: '665px', md: '770px', lg: '795px', xl: "800px"}}
+          h = '500px'
+          >
+          <ContactForm /> 
+          </Box>
+        </Container>
       </Box>
-    </Box>
+    
   )
 }
 
