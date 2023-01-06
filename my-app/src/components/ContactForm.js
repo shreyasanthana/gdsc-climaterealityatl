@@ -14,7 +14,9 @@ import {
   Button,
   Spacer,
   HStack,
-  Center
+  Center,
+  Checkbox, 
+  CheckboxGroup
 } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react'
 import { Textarea } from '@chakra-ui/react';
@@ -23,13 +25,10 @@ import theme from "../theme";
 export default function ContactForm() {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
-    //name, email, age, phone number, previously involved in climate change activism, suggestion
-    "entry.90026055": "",
-    "entry.1831593027": "",
-    "entry.1866223984": "",
-    "entry.1584917209": "",
-    "entry.1509076509": "",
-    "entry.1919208991": ""
+    //name, email, message
+    "entry.1883149767": "",
+    "entry.1568274469": "",
+    "entry.30111594": ""
 
   });
 
@@ -50,7 +49,7 @@ export default function ContactForm() {
     e.preventDefault();
     setSubmit(true);
 
-    let url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmvxm0fJezJe_oB3onPYLuUWYU595fMFJzZkjzguOf-rJeKg/formResponse?entry.90026055=${formData["entry.90026055"]}&entry.1831593027=${formData["entry.1831593027"]}&entry.1866223984=${formData["entry.1866223984"]}&entry.1584917209=${formData["entry.1584917209"]}&entry.1509076509=${formData["entry.1509076509"]}&entry.1919208991=${formData["entry.1919208991"]}`;
+    let url = 'https://docs.google.com/forms/d/1v8Z_wJj0PfYLNlFMt9AO3m7jgI1kvC1BwFzgzn7bjKY/formResponse?entry.1883149767=${formData["entry.1883149767"]}&entry.1568274469=${formData["entry.1568274469"]}&entry.30111594=${formData["entry.30111594"]}'
 
     const res = await fetch(url, {
       method: "POST",
@@ -88,37 +87,22 @@ export default function ContactForm() {
               <Grid minH="100vh" p={3} templateColumns='repeat(5, 1fr)'>
               <GridItem colSpan={5}>
                   <VStack spacing={5}>
-                  <Text fontSize="35px" fontWeight='bold'> Join The Climate Reality Atlanta Chapter! </Text>
+                  <Text fontSize="35px" fontWeight='bold'> Contact Us! </Text>
                   <Box textAlign="middle" fontSize="m" w='100%'>
                     <FormControl isRequired>
-                      <FormLabel> First Name: </FormLabel>
+                      <FormLabel> Name: </FormLabel>
                       <Input
-                        placeholder="First Name"
+                        placeholder="Name"
                         required
                         type="text"
-                        name="entry.90026055"
-                        onChange={handleInputData("entry.90026055")}
-                        value={formData["entry.90026055"]}
+                        name="entry.1883149767"
+                        onChange={handleInputData("entry.1883149767")}
+                        value={formData["entry.1883149767"]}
                         autoComplete={false}
                       />
                     </FormControl>
                   </Box>
 
-                    {/* MUST UPDATE THE ENTRY VALUE */}
-                  <Box textAlign="middle" fontSize="m" w='100%'>
-                    <FormControl isRequired>
-                      <FormLabel> Last Name: </FormLabel>
-                      <Input
-                        placeholder="Last Name"
-                        required
-                        type="text"
-                        name="entry.90026055"
-                        onChange={handleInputData("entry.90026055")}
-                        value={formData["entry.90026055"]}
-                        autoComplete={false}
-                      />
-                    </FormControl>
-                  </Box>
 
                   <Box textAlign="left" fontSize="m" w='100%'>
                   <FormControl isRequired>
@@ -127,66 +111,23 @@ export default function ContactForm() {
                       required
                       type="email"
                       placeholder='username@website.com'
-                      name="entry.1831593027"
-                      onChange={handleInputData("entry.1831593027")}
-                      value={formData["entry.1831593027"]}
+                      name="entry.1568274469"
+                      onChange={handleInputData("entry.1568274469")}
+                      value={formData["entry.1568274469"]}
                       autoComplete={false}
                     />
                     </FormControl>
                   </Box>
       
-                  <Box textAlign="left" fontSize="m" w='100%'>
-                  <FormControl>
-                      <FormLabel> Age </FormLabel>
-                      <Input
-                        type='number'
-                        placeholder="18"
-                        name="entry.1866223984"
-                        onChange={handleInputData("entry.1866223984")}
-                        value={formData["entry.1866223984"]}
-                        autoComplete={false}
-                      ></Input>
-                    </FormControl>
-                  </Box>
-      
-                  <Box textAlign="left" fontSize="m" w='100%'>
-                  <FormControl>
-                      <FormLabel> Phone Number: </FormLabel>
-                      <Input
-                        maxLength={10}
-                        type='tel'
-                        placeholder='Please only enter the 10 digits of your phone number (no dashes or spaces)'
-                        name="entry.1584917209"
-                        onChange={handleInputData("entry.1584917209")}
-                        value={formData["entry.1584917209"]}
-                        autoComplete={false}
-                      ></Input>
-                    </FormControl>
-                  </Box>
-      
-                  <Box textAlign="left" fontSize="m" w='100%'>
-                  <Text fontSize="md"> Suggestion: </Text>
-                  <Textarea
-                    placeholder="Write your suggestion here!"
-                    required
-                    name="entry.1509076509"
-                    rows="4"
-                    cols="100"
-                    onChange={handleInputData("entry.1509076509")}
-                    value={formData["entry.1509076509"]}
-                    autoComplete={false}
-                  ></Textarea>
-                  </Box>
-
                 <Box textAlign="left" fontSize="m" w='100%'>
-                  <Text fontSize="md"> Any questions, comments, and/or concerns?: </Text>
+                  <Text fontSize="md"> Message </Text>
                   <Textarea
-                    placeholder="Write them here!"
-                    name="entry.1919208991"
+                    placeholder="Write your message!"
+                    name="entry.30111594"
                     rows="4"
                     cols="100"
-                    onChange={handleInputData("entry.1919208991")}
-                    value={formData["entry.1919208991"]}
+                    onChange={handleInputData("entry.30111594")}
+                    value={formData["entry.30111594"]}
                     autoComplete={false}
                   ></Textarea>
                   </Box>
