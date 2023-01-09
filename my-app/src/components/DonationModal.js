@@ -1,5 +1,5 @@
 import React from "react";
-import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Text, Heading, Link, Flex } from "@chakra-ui/react";
+import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Text, Heading, Flex } from "@chakra-ui/react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 const DonateLink = "https://www.climaterealityproject.org/donate/chapters-support-climate-reality-project-atlanta-ga";
 

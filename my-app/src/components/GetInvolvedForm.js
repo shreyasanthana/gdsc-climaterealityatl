@@ -11,12 +11,7 @@ import {
   FormControl,
   FormLabel,
   Flex,
-  Button,
-  Spacer,
-  HStack,
-  Center,
-  Checkbox, 
-  CheckboxGroup
+  Button
 } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react'
 import { Textarea } from '@chakra-ui/react';

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Box, Image, Spacer, Flex, Link } from "@chakra-ui/react";
+import { Text, Box, Image, Flex, Link } from "@chakra-ui/react";
 const heroImage = "pexels-kelly-4320481.jpg";
 
 const Hero = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import { HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box, DefaultIcon, IconButton, VStack, calc } from "@chakra-ui/react";
-import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
+import { HStack, Link, Flex, Text, Image, Spacer, Heading } from "@chakra-ui/react";
+import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Logo = "CRP_Atlanta_white_transp_300x90.png";

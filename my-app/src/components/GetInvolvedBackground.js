@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading, Box, Image, Spacer, Flex } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import getInvolvedImg from "../assets/img/GetInvolved.png";
 
 const GetInvolvedBackground = () => {

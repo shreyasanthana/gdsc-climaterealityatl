@@ -1,5 +1,5 @@
-import { useState, setState, React } from "react";
-import { useDisclosure, HStack, Link, Flex, Text, Image, Spacer, Heading, Button, Box } from "@chakra-ui/react";
+import { React } from "react";
+import { useDisclosure, Link, Flex, Image, Spacer } from "@chakra-ui/react";
 import MobileDrawer from "./MobileDrawer";
 import MenuLinks from "./MenuLinks";
 const Logo = "CRP_Atlanta_white_transp_300x90.png";

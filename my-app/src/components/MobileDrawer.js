@@ -1,7 +1,7 @@
 import React from "react";
-import { useDisclosure, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay,
-  DrawerContent, DrawerCloseButton, Button, Flex, Text, Spacer, Box } from "@chakra-ui/react";
-import { ImMenu, ImCross } from "react-icons/im";
+import { Drawer, DrawerBody, DrawerHeader, DrawerOverlay,
+  DrawerContent, DrawerCloseButton, Button, Flex, Box } from "@chakra-ui/react";
+import { ImMenu } from "react-icons/im";
 import MenuLinks from "./MenuLinks";
 
 const MobileDrawer = ({ isOpen, onOpen, onClose }) => {

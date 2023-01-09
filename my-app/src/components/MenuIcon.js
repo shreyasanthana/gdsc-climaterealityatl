@@ -1,6 +1,5 @@
 import React from "react";
-import { useDisclosure, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay,
-  DrawerContent, DrawerCloseButton, Button, Flex, Text } from "@chakra-ui/react";
+import { useDisclosure, Button, Flex } from "@chakra-ui/react";
 import { IoMdMenu } from "react-icons/io";
 
 const MenuIcon = () => {
