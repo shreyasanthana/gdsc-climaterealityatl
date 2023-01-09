@@ -48,7 +48,7 @@ const DonationModal = ({ flexDirProp }) => {
                 <Button variant="link" mr={5} onClick={onClose}>
                   <Text fontWeight="lighter" color="black" fontFamily="sans-serif" textDecoration="underline" fontSize="sm">Cancel</Text>
                 </Button>
-                <a href={DonateLink} target="_blank">
+                <a href={DonateLink} target="_blank" rel="noreferrer">
                   <Button colorScheme="blue" onClick={onClose}>
                     <Text fontFamily="sans-serif" fontSize="md" textDecoration="underline">Next</Text>
                   </Button>

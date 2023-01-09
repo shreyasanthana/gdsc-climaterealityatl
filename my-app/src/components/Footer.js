@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack, Link, Flex, Text, Image, Spacer, Heading } from "@chakra-ui/react";
+import { Link, Flex, Image, Spacer, Heading } from "@chakra-ui/react";
 import { FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
