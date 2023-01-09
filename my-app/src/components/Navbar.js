@@ -6,7 +6,7 @@ const Logo = "CRP_Atlanta_white_transp_300x90.png";
 
 
 // To install heading and body fonts (which are reflected in Theme.js):
-//  npm install @fontsource/lato    // substituted for nat'l website's BrandonGrotesque
+//  npm install @fontsource/lato // substituted for nat'l website's BrandonGrotesque that requires Adobe license
 //  npm install @fontsource/merriweather-sans
 //  Comment: Could alternatively impor fonts as link in styles.css file
 
