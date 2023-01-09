@@ -1,24 +1,12 @@
 import React, { useState, setState, useEffect } from "react";
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  // theme,
-} from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home";
-import TestMiniCalendar from "./pages/TestMiniCalendar";
 import AboutPage from "./pages/AboutPage";
 import EventsPage from "./pages/EventsPage";
 import GetInvolved from "./pages/GetInvolved";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-
-
 import Navbar from "./components/Navbar";
 
 // To do: evaluate if these two imports needed
